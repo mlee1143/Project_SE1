@@ -1,0 +1,15 @@
+Michael Lee, Rachel Eckleberry
+CS3211 Software Engineering
+Project 1
+
+User Case Scenario:
+
+Name of Use-Case Scenario : Remove Group
+Context : User is logged in viewing collection.
+Primary :
+	1. User presses 'Manage Groups' button.
+	2. User directed to Groups page.
+	3. User selects specified Group to be removed.
+	4. User presses 'Remove Group' button.
+	5. System notifies User if they are sure they want to Remove group.
+Alternative : None

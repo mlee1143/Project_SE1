@@ -1,0 +1,15 @@
+Michael Lee, Rachel Eckleberry
+CS3211 Software Engineering
+Project 1
+
+User Case Scenario:
+
+Name of Use-Case : Remove collectible from group
+Context : User is logged in viewing Collection
+Primary :
+	1. User presses 'View Groups' button
+	2. User directed to Groups page.
+	3. Select Group to view.
+	4. Selected group is listed and displayed,
+	5. User selects collectible from group.
+	6. User removes collectible from group.

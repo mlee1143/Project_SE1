@@ -1,0 +1,27 @@
+Michael Lee, Rachel Eckleberry
+CS3211 Software Engineering
+Project 1
+
+User Case Scenario:
+
+Name of Use-Case Scenario : Create a group
+Context : User is logged in viewing collection.
+Primary :
+	1. User presses 'Manage Groups' button.
+	2. User directed to Groups page.
+	3. Press 'Create Group' button('Plus Button').
+	4. Prompts User for a group name.
+	5. User inputs group name and creates the group.
+	6. User is directed to the recently created 'Group Page' viewing a collection fo collectibles in that group.
+	7. Group is now ready for use and collectibles are ready to be added in.
+Alternative :
+	Group name already exists.
+	5A. User inputs group name 
+	6A. System notifies user that group already exists and does not allow creation of group.
+	7A. System lets user input a different name that does not already exist.
+	8A. Return to 5.
+Alternative :
+	Cancel Group Creation.
+	5A. User exits out of entering name for new group or presses 'Plus' button again.
+	6A. User is directed back to Groups Page.
+	7A. Return to 2.

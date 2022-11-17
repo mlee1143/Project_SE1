@@ -1,0 +1,14 @@
+Michael Lee, Rachel Eckleberry
+CS3211 Software Engineering
+Project 1
+
+User Case Scenario:
+
+Name of Use-Case Scenario : Add collectible to group.
+Context : User is logged in viewing collection.
+Primary : 
+	1. User selects collectible.
+	2. User presses 'Add to Group' button.
+	3. System prompts user to select group to add collectible to.
+	4. User selects the group.
+	5. Collectible is added to selected group.
