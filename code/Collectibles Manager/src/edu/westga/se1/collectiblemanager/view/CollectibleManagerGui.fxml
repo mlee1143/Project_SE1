@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="415.0" prefWidth="415.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
+   <children>
+      <AnchorPane prefHeight="501.0" prefWidth="415.0">
+         <children>
+            <ListView fx:id="collectibleListView" layoutX="191.0" layoutY="43.0" prefHeight="353.0" prefWidth="210.0" />
+            <Label layoutX="26.0" layoutY="49.0" text="Name :" />
+            <TextField fx:id="nameTxtfld" layoutX="24.0" layoutY="66.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="29.0" layoutY="107.0" text="Price :" />
+            <TextField fx:id="priceTxtfld" layoutX="71.0" layoutY="103.0" prefHeight="25.0" prefWidth="38.0" />
+            <Label layoutX="30.0" layoutY="150.0" text="Year :" />
+            <TextField fx:id="yearTxtfld" layoutX="71.0" layoutY="146.0" prefHeight="25.0" prefWidth="38.0" />
+            <Label layoutX="25.0" layoutY="188.0" text="Condition :" />
+            <ChoiceBox fx:id="conditionChoiceBox" layoutX="23.0" layoutY="205.0" prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="21.0" layoutY="242.0" text="Description :" />
+            <TextArea fx:id="descriptionTxtArea" layoutX="20.0" layoutY="265.0" prefHeight="130.0" prefWidth="150.0" />
+            <Button layoutX="62.0" layoutY="416.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Add" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
