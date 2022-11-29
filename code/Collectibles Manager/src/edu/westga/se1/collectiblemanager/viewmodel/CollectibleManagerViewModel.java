@@ -2,11 +2,15 @@ package edu.westga.se1.collectiblemanager.viewmodel;
 
 import edu.westga.se1.collectiblemanager.model.Collectible;
 import edu.westga.se1.collectiblemanager.model.CollectibleManager;
+import edu.westga.se1.collectiblemanager.model.Collection;
+import edu.westga.se1.collectiblemanager.model.Condition;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleListProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
 
 public class CollectibleManagerViewModel {
 	
@@ -18,6 +22,7 @@ public class CollectibleManagerViewModel {
 	private ObjectProperty<Collectible> selectedProperty;
 	
 	private CollectibleManager collectibleManager;
+	private Collection anCollection;
 	
 	public CollectibleManagerViewModel() {
 		this.nameProperty = new SimpleStringProperty();
@@ -27,6 +32,8 @@ public class CollectibleManagerViewModel {
 		this.selectedProperty = new SimpleObjectProperty<Collectible>();
 		
 		this.collectibleManager = new CollectibleManager();
+		this.anCollection = new Collection();
+		this.collectionProperty = new SimpleListProperty<Collectible>(FXCollections.observableArrayList(this.anCollection.get()));
 		
 	}
 	
@@ -63,9 +70,16 @@ public class CollectibleManagerViewModel {
 		int year = Integer.parseInt(this.yearProperty.get());
 		int price = Integer.parseInt(this.priceProperty.get());
 		String description = this.descriptionProperty.get();
+		var condition = Condition.BrandNew;
+		
+		var newCollectible = new Collectible(name, price, year, description, condition);
+		
+		if(this.collectionProperty.add(newCollectible)) {
+			this.anCollection.add(newCollectible);
+			return true;
+		}
 		
 		return false;
-		
 	}
 	
 	public boolean removeCollectible() {

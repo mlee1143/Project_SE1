@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Collection {
-private List<Collectible> collectibles;
-	
+	private List<Collectible> collectibles;
+
 	/**
 	 * Constructor for a Collectible manager object
 	 */
 	public Collection() {
 		this.collectibles = new ArrayList<Collectible>();
 	}
-	
+
 	/**
 	 * Gets the size of the list
 	 * 
@@ -21,7 +21,7 @@ private List<Collectible> collectibles;
 	public int getSize() {
 		return this.collectibles.size();
 	}
-	
+
 	/**
 	 * Adds a collectible to list
 	 * 
@@ -39,7 +39,7 @@ private List<Collectible> collectibles;
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Check if list contains collectible
 	 * 
@@ -49,5 +49,9 @@ private List<Collectible> collectibles;
 	public boolean contains(Object obj) {
 		return this.collectibles.contains(obj);
 	}
-	
+
+	public List<Collectible> get() {
+		return this.collectibles;
+	}
+
 }
