@@ -87,7 +87,7 @@ public class CollectibleManagerViewModel {
 		String description = this.descriptionProperty.get();
 		Condition condition = this.conditionProperty.get();
 		
-		var newCollectible = new Collectible(name, year, price, description, condition);
+		var newCollectible = new Collectible(name, price, year, description, condition);
 		
 		if(this.collectionProperty.add(newCollectible)) {
 			this.anCollection.add(newCollectible);
@@ -125,5 +125,6 @@ public class CollectibleManagerViewModel {
 	
 	private void reset() {
 		this.collectionProperty.set(FXCollections.observableArrayList(this.anCollection.get()));
+		this.selectedProperty.set(null);
 	}
 }

@@ -99,6 +99,8 @@ public class CollectibleManagerCodeBehind {
 						.or(this.priceTxtfld.textProperty().isEmpty()
 								.or(this.yearTxtfld.textProperty().isEmpty().or(this.descriptionTxtArea.textProperty()
 										.isEmpty().or(this.cmboboxCondition.valueProperty().isNull())))));
+		
+		this.btnRemove.disableProperty().bind(this.selectedProperty.isNull());
 	}
 
 	private void clearForms() {

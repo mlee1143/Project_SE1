@@ -6,32 +6,32 @@ public class Collectible {
 	private double price;
 	private String descritpion;
 	private Condition condition;
-	
+
 //	--module-path "${eclipse_home}/javafx-sdk-18.0.2/lib" --add-modules
 //	javafx.controls,javafx.fxml
-	
+
 	/**
 	 * Constructor for Collectible object
 	 * 
 	 * @precondition name != null && !name.isEmpty() && quantity > 0
-	 * @param name the name of the collectible
+	 * @param name     the name of the collectible
 	 * @param quantity
 	 */
-	public Collectible(String name, int year, double price, String description, Condition condition) {
+	public Collectible(String name, double price, int year, String description, Condition condition) {
 		if (name == null) {
 			throw new IllegalArgumentException("name cannot be null");
 		}
 		if (name.isEmpty()) {
 			throw new IllegalArgumentException("name cannot be empty");
 		}
-		
+
 		this.name = name;
 		this.year = year;
 		this.price = price;
 		this.descritpion = description;
 		this.condition = condition;
 	}
-	
+
 	/**
 	 * Gets the name of the collectible
 	 * 
@@ -42,11 +42,11 @@ public class Collectible {
 	public String getName() {
 		return this.name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public int getYear() {
 		return year;
 	}
@@ -78,12 +78,12 @@ public class Collectible {
 	public void setCondition(Condition condition) {
 		this.condition = condition;
 	}
-	
+
 	@Override
 	public String toString() {
-		String output = this.name + ": " + this.year + ", " + this.price + ", " + this.condition + ", " + this.descritpion;
+		String output = this.name + ": " + this.year + ", " + this.price + ", " + this.condition + ", "
+				+ this.descritpion;
 		return output;
 	}
-
 
 }
