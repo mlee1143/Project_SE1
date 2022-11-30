@@ -20,6 +20,7 @@ public class CollectibleManagerViewModel {
 	private StringProperty descriptionProperty;
 	private ListProperty<Collectible> collectionProperty;
 	private ObjectProperty<Collectible> selectedProperty;
+	private ObjectProperty<Condition> conditionProperty;
 	
 	private CollectibleManager collectibleManager;
 	private Collection anCollection;
@@ -30,6 +31,7 @@ public class CollectibleManagerViewModel {
 		this.priceProperty = new SimpleStringProperty();
 		this.descriptionProperty = new SimpleStringProperty();
 		this.selectedProperty = new SimpleObjectProperty<Collectible>();
+		this.conditionProperty = new SimpleObjectProperty<Condition>();
 		
 		this.collectibleManager = new CollectibleManager();
 		this.anCollection = new Collection();
@@ -61,6 +63,10 @@ public class CollectibleManagerViewModel {
 		return this.selectedProperty;
 	}
 	
+	public ObjectProperty<Condition> conditionProperty(){
+		return this.conditionProperty;
+	}
+	
 	public CollectibleManager getCollectibleManager() {
 		return this.collectibleManager;
 	}
@@ -68,14 +74,14 @@ public class CollectibleManagerViewModel {
 	public boolean addCollectible() {
 		String name = this.nameProperty.get();
 		int year = Integer.parseInt(this.yearProperty.get());
-		int price = Integer.parseInt(this.priceProperty.get());
+		double price = Double.parseDouble(this.priceProperty.get());
 		String description = this.descriptionProperty.get();
-		var condition = Condition.BrandNew;
+		Condition condition = this.conditionProperty.get();
 		
-		var newCollectible = new Collectible(name, price, year, description, condition);
+		var newCollectible = new Collectible(name, year, price, description, condition);
 		
 		if(this.collectionProperty.add(newCollectible)) {
-			this.anCollection.add(newCollectible);
+			//this.anCollection.add(newCollectible);
 			return true;
 		}
 		

@@ -3,9 +3,12 @@ package edu.westga.se1.collectiblemanager.model;
 public class Collectible {
 	private String name;
 	private int year;
-	private int price;
+	private double price;
 	private String descritpion;
 	private Condition condition;
+	
+	///--module-path "${eclipse_home}/javafx-sdk-18.0.2/lib" --add-modules
+	///javafx.controls,javafx.fxml
 	
 	/**
 	 * Constructor for Collectible object
@@ -14,7 +17,7 @@ public class Collectible {
 	 * @param name the name of the collectible
 	 * @param quantity
 	 */
-	public Collectible(String name, int year, int price, String description, Condition condition) {
+	public Collectible(String name, int year, double price, String description, Condition condition) {
 		if (name == null) {
 			throw new IllegalArgumentException("name cannot be null");
 		}
@@ -53,7 +56,7 @@ public class Collectible {
 		this.year = year;
 	}
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
@@ -75,6 +78,12 @@ public class Collectible {
 
 	public void setCondition(Condition condition) {
 		this.condition = condition;
+	}
+	
+	@Override
+	public String toString() {
+		String output = this.name + ": " + this.price + " , " + this.condition;
+		return output;
 	}
 
 
