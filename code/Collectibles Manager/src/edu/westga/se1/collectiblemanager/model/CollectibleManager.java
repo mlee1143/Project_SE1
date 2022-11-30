@@ -6,6 +6,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * The CollectibleManager class.
+ * 
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
+ */
 public class CollectibleManager {
 	private Map<User, List<Collectible>> database;
 	

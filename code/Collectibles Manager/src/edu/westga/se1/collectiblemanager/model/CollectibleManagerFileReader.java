@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The file reader for CollectibleManager.
+ * 
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
+ */
 public class CollectibleManagerFileReader {
 	public static final String FIELD_SEPARATOR = ",";
 	private File collectionFile;

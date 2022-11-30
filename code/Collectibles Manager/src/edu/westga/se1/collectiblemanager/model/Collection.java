@@ -3,6 +3,12 @@ package edu.westga.se1.collectiblemanager.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The Collection class.
+ * 
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
+ */
 public class Collection {
 	private List<Collectible> collectibles;
 

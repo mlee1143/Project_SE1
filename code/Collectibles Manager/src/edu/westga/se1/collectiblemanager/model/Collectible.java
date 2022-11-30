@@ -1,5 +1,11 @@
 package edu.westga.se1.collectiblemanager.model;
 
+/**
+ * The Collectible class.
+ * 
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
+ */
 public class Collectible {
 	private String name;
 	private int year;

@@ -9,8 +9,8 @@ import javafx.stage.Stage;
 /**
  * Entry point for application.
  * 
- * @author CS3151
- * @version Spring
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
  */
 public class CollectibleManagerApplication extends Application {
 

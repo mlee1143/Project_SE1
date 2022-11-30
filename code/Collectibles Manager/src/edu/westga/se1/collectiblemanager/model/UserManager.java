@@ -4,6 +4,12 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * The UserManager class.
+ * 
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
+ */
 public class UserManager {
 
 	private Map<String, String> users;

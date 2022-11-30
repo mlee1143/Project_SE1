@@ -3,8 +3,8 @@ package edu.westga.se1.collectiblemanager.model;
 /**
  * User class
  * 
- * @author Michael Lee
- *
+ * @author Michael Lee & Rachel Eckleberry
+ * @version Fall 2022
  */
 public class User {
 
