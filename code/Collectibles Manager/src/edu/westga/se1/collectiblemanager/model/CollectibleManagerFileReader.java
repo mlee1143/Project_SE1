@@ -11,7 +11,10 @@ public class CollectibleManagerFileReader {
 	private File collectionFile;
 
 	public CollectibleManagerFileReader() {
-		this.collectionFile = new File("Collectibles.txt");
+//		if (collectionFile == null) {
+//			throw new IllegalArgumentException("File cannot be null");
+//		}
+		this.collectionFile = new File("/Collectibles Manager/src/Collectibles");
 	}
 	
 	public List<Collectible> loadCollectionFromFile() throws FileNotFoundException{
@@ -38,7 +41,7 @@ public class CollectibleManagerFileReader {
 		int year = Integer.parseInt(values[1]);
 		double price = Double.parseDouble(values[2]);
 		String description = values[3];
-		Condition condition = Condition.BRAND_NEW;
+		Condition condition = Condition.valueOf(values[4]);
 		
 		Collectible collectible = new Collectible(name, year, price, description, condition);
 		

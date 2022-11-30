@@ -40,6 +40,10 @@ public class Collection {
 		return false;
 	}
 
+	public boolean remove(Collectible collectible) {
+		return this.collectibles.remove(collectible);
+	}
+
 	/**
 	 * Check if list contains collectible
 	 * 
@@ -52,6 +56,10 @@ public class Collection {
 
 	public List<Collectible> get() {
 		return this.collectibles;
+	}
+
+	public boolean addAll(List<Collectible> collection) {
+		return this.collectibles.addAll(collection);
 	}
 
 }

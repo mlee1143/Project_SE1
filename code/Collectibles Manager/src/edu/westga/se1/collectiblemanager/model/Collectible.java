@@ -7,8 +7,8 @@ public class Collectible {
 	private String descritpion;
 	private Condition condition;
 	
-	///--module-path "${eclipse_home}/javafx-sdk-18.0.2/lib" --add-modules
-	///javafx.controls,javafx.fxml
+//	--module-path "${eclipse_home}/javafx-sdk-18.0.2/lib" --add-modules
+//	javafx.controls,javafx.fxml
 	
 	/**
 	 * Constructor for Collectible object
@@ -31,7 +31,6 @@ public class Collectible {
 		this.descritpion = description;
 		this.condition = condition;
 	}
-	
 	
 	/**
 	 * Gets the name of the collectible
@@ -82,7 +81,7 @@ public class Collectible {
 	
 	@Override
 	public String toString() {
-		String output = this.name + ": " + this.price + " , " + this.condition;
+		String output = this.name + ": " + this.year + ", " + this.price + ", " + this.condition + ", " + this.descritpion;
 		return output;
 	}
 

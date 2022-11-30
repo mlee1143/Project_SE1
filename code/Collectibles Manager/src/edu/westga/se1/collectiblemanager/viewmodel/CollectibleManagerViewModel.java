@@ -1,7 +1,10 @@
 package edu.westga.se1.collectiblemanager.viewmodel;
 
+import java.util.List;
+
 import edu.westga.se1.collectiblemanager.model.Collectible;
 import edu.westga.se1.collectiblemanager.model.CollectibleManager;
+import edu.westga.se1.collectiblemanager.model.CollectibleManagerFileReader;
 import edu.westga.se1.collectiblemanager.model.Collection;
 import edu.westga.se1.collectiblemanager.model.Condition;
 import javafx.beans.property.ListProperty;
@@ -21,6 +24,7 @@ public class CollectibleManagerViewModel {
 	private ListProperty<Collectible> collectionProperty;
 	private ObjectProperty<Collectible> selectedProperty;
 	private ObjectProperty<Condition> conditionProperty;
+	private StringProperty errorProperty;
 	
 	private CollectibleManager collectibleManager;
 	private Collection anCollection;
@@ -32,6 +36,7 @@ public class CollectibleManagerViewModel {
 		this.descriptionProperty = new SimpleStringProperty();
 		this.selectedProperty = new SimpleObjectProperty<Collectible>();
 		this.conditionProperty = new SimpleObjectProperty<Condition>();
+		this.errorProperty = new SimpleStringProperty();
 		
 		this.collectibleManager = new CollectibleManager();
 		this.anCollection = new Collection();
@@ -67,6 +72,10 @@ public class CollectibleManagerViewModel {
 		return this.conditionProperty;
 	}
 	
+	public StringProperty errorProperty() {
+		return this.errorProperty;
+	}
+	
 	public CollectibleManager getCollectibleManager() {
 		return this.collectibleManager;
 	}
@@ -81,7 +90,7 @@ public class CollectibleManagerViewModel {
 		var newCollectible = new Collectible(name, year, price, description, condition);
 		
 		if(this.collectionProperty.add(newCollectible)) {
-			//this.anCollection.add(newCollectible);
+			this.anCollection.add(newCollectible);
 			return true;
 		}
 		
@@ -89,6 +98,32 @@ public class CollectibleManagerViewModel {
 	}
 	
 	public boolean removeCollectible() {
+		Collectible collectible = this.selectedProperty.get();
+		
+		if (this.collectionProperty.remove(collectible)) {
+			this.anCollection.remove(collectible);
+			this.reset();
+			return true;
+		}
 		return false;
+	}
+	
+	public void loadCollection() {
+		CollectibleManagerFileReader fileReader = new CollectibleManagerFileReader();
+		
+		try {
+			List<Collectible> collectibles = fileReader.loadCollectionFromFile();
+			
+			if(this.collectionProperty.addAll(collectibles)) {
+				this.anCollection.addAll(collectibles);
+				this.reset();
+			}
+		} catch (Exception ex) {
+			this.errorProperty.setValue(ex.getMessage());
+		}
+	}
+	
+	private void reset() {
+		this.collectionProperty.set(FXCollections.observableArrayList(this.anCollection.get()));
 	}
 }
