@@ -7,18 +7,25 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The CollectibleManager class.
+ * The CollectibleManager class. Manages a database of collections for different
+ * users.
  * 
  * @author Michael Lee & Rachel Eckleberry
  * @version Fall 2022
  */
 public class CollectibleManager {
 	private Map<User, List<Collectible>> database;
-	
+
+	/**
+	 * Constructor for CollectibleManager.
+	 * 
+	 * @precondition none
+	 * @postcondition none
+	 */
 	public CollectibleManager() {
 		this.database = new HashMap<User, List<Collectible>>();
 	}
-	
+
 	/**
 	 * Clears the HashMap
 	 * 
@@ -83,7 +90,7 @@ public class CollectibleManager {
 	 * @param value value to be associated with the specified key
 	 * @return true if added, false otherwise
 	 */
-	public boolean add(User key, List<Collectible>value) {
+	public boolean add(User key, List<Collectible> value) {
 		if (key == null) {
 			throw new IllegalArgumentException("Key cannot be null");
 		}
@@ -106,7 +113,7 @@ public class CollectibleManager {
 	 * @param key   key with which the specified value is associated
 	 * @param value value to be associated with the specified key
 	 */
-	public void update(User key, List<Collectible>value) {
+	public void update(User key, List<Collectible> value) {
 		if (key == null) {
 			throw new IllegalArgumentException("Key cannot be null");
 		}
@@ -122,7 +129,7 @@ public class CollectibleManager {
 	 * @precondition key != null
 	 * @postcondition none
 	 * 
-	 * @param key   key with which the specified value is associated
+	 * @param key key with which the specified value is associated
 	 * @return true if value is removed, false otherwise
 	 */
 	public boolean remove(User key) {
@@ -150,7 +157,6 @@ public class CollectibleManager {
 
 	/**
 	 * Gets a collection of Values
-	 * @return 
 	 * 
 	 * @precondition none
 	 * @postcondition none

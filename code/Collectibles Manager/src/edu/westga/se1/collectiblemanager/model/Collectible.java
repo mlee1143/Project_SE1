@@ -10,8 +10,9 @@ public class Collectible {
 	private String name;
 	private int year;
 	private double price;
-	private String descritpion;
+	private String description;
 	private Condition condition;
+	private static final String COMMA = ", ";
 
 //	--module-path "${eclipse_home}/javafx-sdk-18.0.2/lib" --add-modules
 //	javafx.controls,javafx.fxml
@@ -20,8 +21,11 @@ public class Collectible {
 	 * Constructor for Collectible object
 	 * 
 	 * @precondition name != null && !name.isEmpty() && quantity > 0
-	 * @param name     the name of the collectible
-	 * @param quantity
+	 * @param name        the name of the collectible
+	 * @param price       the price
+	 * @param year        the year
+	 * @param description the description
+	 * @param condition   the condition
 	 */
 	public Collectible(String name, double price, int year, String description, Condition condition) {
 		if (name == null) {
@@ -34,7 +38,7 @@ public class Collectible {
 		this.name = name;
 		this.year = year;
 		this.price = price;
-		this.descritpion = description;
+		this.description = description;
 		this.condition = condition;
 	}
 
@@ -54,7 +58,7 @@ public class Collectible {
 	}
 
 	public int getYear() {
-		return year;
+		return this.year;
 	}
 
 	public void setYear(int year) {
@@ -62,7 +66,7 @@ public class Collectible {
 	}
 
 	public double getPrice() {
-		return price;
+		return this.price;
 	}
 
 	public void setPrice(int price) {
@@ -70,15 +74,15 @@ public class Collectible {
 	}
 
 	public String getDescritpion() {
-		return descritpion;
+		return this.description;
 	}
 
 	public void setDescritpion(String descritpion) {
-		this.descritpion = descritpion;
+		this.description = descritpion;
 	}
 
 	public Condition getCondition() {
-		return condition;
+		return this.condition;
 	}
 
 	public void setCondition(Condition condition) {
@@ -87,8 +91,8 @@ public class Collectible {
 
 	@Override
 	public String toString() {
-		String output = this.name + ": " + this.year + ", " + this.price + ", " + this.condition + ", "
-				+ this.descritpion;
+		String output = this.name + ": " + this.year + COMMA + this.price + COMMA + this.condition + COMMA
+				+ this.description;
 		return output;
 	}
 

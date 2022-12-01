@@ -1,3 +1,5 @@
+package edu.westga.se1.collectiblemanager.view;
+
 import edu.westga.se1.collectiblemanager.model.CollectibleGroup;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
