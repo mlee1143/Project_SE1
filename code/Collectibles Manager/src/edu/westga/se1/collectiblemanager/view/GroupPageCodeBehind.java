@@ -1,3 +1,4 @@
+import edu.westga.se1.collectiblemanager.model.CollectibleGroup;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -9,7 +10,7 @@ public class GroupPageCodeBehind {
     private Button addButton;
 
     @FXML
-    private ListView<Group> groupsListView;
+    private ListView<CollectibleGroup> groupsListView;
 
     @FXML
     private TextField nameTextField;
