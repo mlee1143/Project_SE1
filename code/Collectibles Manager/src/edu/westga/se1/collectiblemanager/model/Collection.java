@@ -40,14 +40,25 @@ public class Collection {
 		if (item == null) {
 			throw new IllegalArgumentException("item cannot be null");
 		}
-		if (this.collectibles.add(item)) {
-			return true;
-		}
-		return false;
+
+		return this.collectibles.add(item);
 	}
 
-	public boolean remove(Collectible collectible) {
-		return this.collectibles.remove(collectible);
+	/**
+	 * Removes a collectible from the collection.
+	 * 
+	 * @precondition item != null
+	 * @postcondition getSize() = @prev - 1
+	 * 
+	 * @param item the item to be removed
+	 * @return true if the collectible was removed, false otherwise
+	 */
+	public boolean remove(Collectible item) {
+		if (item == null) {
+			throw new IllegalArgumentException("The collectible cannot be null.");
+		}
+
+		return this.collectibles.remove(item);
 	}
 
 	/**

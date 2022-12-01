@@ -1,8 +1,5 @@
 package edu.westga.se1.collectiblemanager.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * The Group class.
  * 
@@ -12,7 +9,7 @@ import java.util.List;
 public class Group {
 
 	private String name;
-	private List<Collectible> collectibles;
+	private Collection collectibles;
 
 	/**
 	 * Constructor for group object
@@ -31,7 +28,7 @@ public class Group {
 		}
 
 		this.name = name;
-		this.collectibles = new ArrayList<Collectible>();
+		this.collectibles = new Collection();
 	}
 
 	/**
@@ -57,7 +54,7 @@ public class Group {
 	 * 
 	 * @return the list of collectibles
 	 */
-	public List<Collectible> getCollectibles() {
+	public Collection getCollectibles() {
 		return this.collectibles;
 	}
 
@@ -71,39 +68,19 @@ public class Group {
 	 * @return true if the collectible was added, false otherwise
 	 */
 	public boolean addCollectible(Collectible collectible) {
-		if (collectible == null) {
-			throw new IllegalArgumentException("The collectible cannot be null.");
-		}
-
-		int groupSize = this.collectibles.size();
-		this.collectibles.add(collectible);
-
-		if (this.collectibles.size() == groupSize + 1) {
-			return true;
-		}
-		return false;
+		return this.collectibles.add(collectible);
 	}
 
 	/**
-	 * Removes a collectible from the group at the specified index.
+	 * Removes a collectible from the group.
 	 * 
-	 * @precondition this.collectibles.size > index >= 0
+	 * @precondition collectible != null
 	 * @postcondition the collectible is removed
 	 * 
-	 * @param index the index of the collectible to remove
+	 * @param collectible the collectible to remove
 	 * @return true if the collectible was removed, false otherwise
 	 */
-	public boolean removeCollectible(int index) {
-		if (index < 0 || index >= this.collectibles.size()) {
-			throw new IllegalArgumentException("The index must be within the bounds of the group's collection.");
-		}
-
-		int groupSize = this.collectibles.size();
-		this.collectibles.remove(index);
-
-		if (this.collectibles.size() == groupSize - 1) {
-			return true;
-		}
-		return false;
+	public boolean removeCollectible(Collectible collectible) {
+		return this.collectibles.remove(collectible);
 	}
 }

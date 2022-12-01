@@ -74,7 +74,7 @@ public class CollectibleManagerCodeBehind {
 		this.yearTxtfld.textProperty().bindBidirectional(this.viewModel.yearProperty());
 		this.descriptionTxtArea.textProperty().bindBidirectional(this.viewModel.descriptionProperty());
 		this.collectibleListView.itemsProperty().bind(this.viewModel.listProperty());
-		this.viewModel.conditionProperty().bind(cmboboxCondition.getSelectionModel().selectedItemProperty());
+		this.viewModel.conditionProperty().bind(this.cmboboxCondition.getSelectionModel().selectedItemProperty());
 		this.cmboboxCondition.setItems((FXCollections.observableArrayList(Condition.values())));
 		this.selectedProperty.bindBidirectional(this.viewModel.selectedProperty());
 	}
@@ -99,7 +99,7 @@ public class CollectibleManagerCodeBehind {
 						.or(this.priceTxtfld.textProperty().isEmpty()
 								.or(this.yearTxtfld.textProperty().isEmpty().or(this.descriptionTxtArea.textProperty()
 										.isEmpty().or(this.cmboboxCondition.valueProperty().isNull())))));
-		
+
 		this.btnRemove.disableProperty().bind(this.selectedProperty.isNull());
 	}
 
