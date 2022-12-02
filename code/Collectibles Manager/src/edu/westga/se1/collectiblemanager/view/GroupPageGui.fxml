@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.se1.collectiblemanager.view.GroupPageCodeBehind">
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="501.0" prefWidth="415.0">
          <children>
@@ -20,7 +20,7 @@
             <TextField fx:id="nameTextField" layoutX="47.0" layoutY="48.0" />
             <Label layoutX="5.0" layoutY="52.0" text="Name:" />
             <Button fx:id="removeButton" layoutX="140.0" layoutY="438.0" mnemonicParsing="false" onAction="#onClick_RemoveGroup" text="Remove" />
-            <Button fx:id="viewButton" layoutX="225.0" layoutY="438.0" mnemonicParsing="false" text="View" />
+            <Button fx:id="viewButton" layoutX="225.0" layoutY="438.0" mnemonicParsing="false" onAction="#onClick_ViewCollection" text="View" />
             <Button fx:id="addButton" layoutX="207.0" layoutY="48.0" mnemonicParsing="false" onAction="#onClick_AddGroup" text="Add" />
             <ListView fx:id="listviewCollectibles" layoutX="190.0" layoutY="86.0" prefHeight="326.0" prefWidth="200.0" />
          </children>
