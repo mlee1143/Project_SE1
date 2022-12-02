@@ -83,4 +83,10 @@ public class Group {
 	public boolean removeCollectible(Collectible collectible) {
 		return this.collectibles.remove(collectible);
 	}
+	
+	@Override
+	public String toString() {
+		String output = this.name + " : Size of Collection: " + this.collectibles.getSize();
+		return output;
+	}
 }

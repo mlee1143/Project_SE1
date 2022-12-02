@@ -26,7 +26,8 @@
             <Button fx:id="btnAdd" layoutX="62.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleAddCollectible" prefHeight="25.0" prefWidth="67.0" text="Add" />
             <Label fx:id="lblError" layoutX="55.0" layoutY="14.0" prefHeight="17.0" prefWidth="315.0" textAlignment="CENTER" textFill="#f83927" />
             <Button fx:id="btnRemove" layoutX="263.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleRemoveCollectible" prefHeight="25.0" prefWidth="67.0" text="Remove" />
-            <Button fx:id="btnLoad" layoutX="170.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleLoadCollection" prefHeight="25.0" prefWidth="75.0" text="Load" />
+            <Button fx:id="btnLoad" layoutX="259.0" layoutY="458.0" mnemonicParsing="false" onAction="#handleLoadCollection" prefHeight="25.0" prefWidth="75.0" text="Load" />
+            <Button fx:id="btnViewGroups" layoutX="54.0" layoutY="458.0" mnemonicParsing="false" onAction="#switchToGroupsView" text="View Groups" />
          </children>
       </AnchorPane>
    </children>

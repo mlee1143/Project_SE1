@@ -1,5 +1,7 @@
 package edu.westga.se1.collectiblemanager.view;
 
+import java.io.IOException;
+
 import edu.westga.se1.collectiblemanager.model.Collectible;
 import edu.westga.se1.collectiblemanager.model.Condition;
 import edu.westga.se1.collectiblemanager.viewmodel.CollectibleManagerViewModel;
@@ -8,6 +10,8 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
@@ -28,6 +32,9 @@ public class CollectibleManagerCodeBehind {
 
 	@FXML
 	private Button btnRemove;
+
+	@FXML
+	private Button btnViewGroups;
 
 	@FXML
 	private ComboBox<Condition> cmboboxCondition;
@@ -127,4 +134,9 @@ public class CollectibleManagerCodeBehind {
 	void handleLoadCollection(ActionEvent event) {
 		this.viewModel.loadCollection();
 	}
+	
+	@FXML
+    void switchToGroupsView(ActionEvent event) {
+		
+    }
 }
