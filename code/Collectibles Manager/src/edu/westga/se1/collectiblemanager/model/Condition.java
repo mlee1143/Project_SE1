@@ -7,18 +7,15 @@ package edu.westga.se1.collectiblemanager.model;
  * @version Fall 2022
  */
 public enum Condition {
-	
-	BRAND_NEW("Brand New"),
-	GOOD_CONDITION("Good Condition"),
-	ACCEPTABLE("Acceptable"),
-	USED("Used");
-	
+
+	BRAND_NEW("Brand New"), GOOD_CONDITION("Good Condition"), ACCEPTABLE("Acceptable"), USED("Used");
+
 	private String description;
-	
-	Condition(String description){
+
+	Condition(String description) {
 		this.description = description;
 	}
-	
+
 	@Override
 	public String toString() {
 		return this.description;

@@ -6,16 +6,16 @@ import java.io.PrintWriter;
 import java.util.List;
 
 public class CollectibleManagerFileWriter {
-	public final String FIELD_SEPARATOR = ",";
+	private static final String FIELD_SEPARATOR = ",";
 	private File collectionFile;
-	
+
 	/**
 	 * Collectible Manager File Writer
 	 */
 	public CollectibleManagerFileWriter() {
 		this.collectionFile = new File("Collectibles.txt");
 	}
-	
+
 	/**
 	 * Writes to the file
 	 * 
@@ -26,15 +26,15 @@ public class CollectibleManagerFileWriter {
 		if (collectibles == null) {
 			throw new IllegalArgumentException("List cannot be null");
 		}
-		
-		try (PrintWriter writer = new PrintWriter(this.collectionFile)){
+
+		try (PrintWriter writer = new PrintWriter(this.collectionFile)) {
 			for (Collectible currentCollectible : collectibles) {
-				String output = currentCollectible.getName() + this.FIELD_SEPARATOR;
-				output += currentCollectible.getPrice() + this.FIELD_SEPARATOR;
-				output += currentCollectible.getYear() + this.FIELD_SEPARATOR;
-				output += currentCollectible.getDescritpion() + this.FIELD_SEPARATOR;
-				output += currentCollectible.getCondition() + this.FIELD_SEPARATOR;
-				
+				String output = currentCollectible.getName() + FIELD_SEPARATOR;
+				output += currentCollectible.getPrice() + FIELD_SEPARATOR;
+				output += currentCollectible.getYear() + FIELD_SEPARATOR;
+				output += currentCollectible.getDescription() + FIELD_SEPARATOR;
+				output += currentCollectible.getCondition() + FIELD_SEPARATOR;
+
 				writer.println(output);
 			}
 		}

@@ -86,7 +86,7 @@ public class CollectibleManagerCodeBehind {
 						this.nameTxtfld.textProperty().set(newvalue.getName());
 						this.priceTxtfld.textProperty().set(Double.toString(newvalue.getPrice()));
 						this.yearTxtfld.textProperty().set(Integer.toString(newvalue.getYear()));
-						this.descriptionTxtArea.textProperty().set(newvalue.getDescritpion());
+						this.descriptionTxtArea.textProperty().set(newvalue.getDescription());
 						this.cmboboxCondition.setValue(newvalue.getCondition());
 						this.selectedProperty.set(newvalue);
 					}
