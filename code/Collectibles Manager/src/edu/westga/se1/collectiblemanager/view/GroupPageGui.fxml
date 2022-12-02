@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.se1.collectiblemanager.view.GroupPageCodeBehind">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="501.0" prefWidth="415.0">
          <children>

@@ -53,6 +53,13 @@ public class Collectible {
 		return this.name;
 	}
 
+	/**
+	 * Sets the name of the collectible
+	 * 
+	 * @precondition none
+	 * @postcondition none
+	 * @param name the name to be set
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}

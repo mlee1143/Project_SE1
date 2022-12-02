@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="edu.westga.se1.collectiblemanager.view.LoginPage">
+<AnchorPane prefHeight="314.0" prefWidth="306.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="edu.westga.se1.collectiblemanager.view.LoginPageCodeBehind">
    <children>
       <AnchorPane prefHeight="314.0" prefWidth="306.0">
          <children>

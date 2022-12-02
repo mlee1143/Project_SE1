@@ -42,6 +42,7 @@ public class GroupPageCodeBehind {
 	@FXML
 	private void initialize() {
 		this.bindToViewModel();
+		this.bindButtonDisableProperty();
 	}
 
 	private void bindToViewModel() {
@@ -50,6 +51,13 @@ public class GroupPageCodeBehind {
 		this.nameTextField.textProperty().bindBidirectional(this.viewModel.nameProperty());
 		
 	}
+	
+	
+	private void bindButtonDisableProperty() {
+		this.addButton.disableProperty()
+		.bind(this.nameTextField.textProperty().isEmpty());
+	}
+	
 	
 	@FXML
     void onClick_AddGroup(ActionEvent event) {
