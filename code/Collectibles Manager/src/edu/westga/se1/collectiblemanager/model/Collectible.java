@@ -20,7 +20,7 @@ public class Collectible {
 	/**
 	 * Constructor for Collectible object
 	 * 
-	 * @precondition name != null && !name.isEmpty() && quantity > 0
+	 * @precondition name != null && !name.isEmpty()
 	 * @param name        the name of the collectible
 	 * @param price       the price
 	 * @param year        the year
@@ -73,12 +73,12 @@ public class Collectible {
 		this.price = price;
 	}
 
-	public String getDescritpion() {
+	public String getDescription() {
 		return this.description;
 	}
 
-	public void setDescritpion(String descritpion) {
-		this.description = descritpion;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public Condition getCondition() {
